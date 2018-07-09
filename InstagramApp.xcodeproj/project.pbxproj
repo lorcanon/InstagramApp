@@ -16,6 +16,8 @@
 		A878C50520F3FC8C004EEA39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A878C50420F3FC8C004EEA39 /* main.m */; };
 		A878C50F20F3FC8C004EEA39 /* InstagramAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A878C50E20F3FC8C004EEA39 /* InstagramAppTests.m */; };
 		A878C51A20F3FC8C004EEA39 /* InstagramAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A878C51920F3FC8C004EEA39 /* InstagramAppUITests.m */; };
+		A8BD6F9620F42C53009B7BF1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8BD6F9420F42C53009B7BF1 /* ProfileViewController.m */; };
+		A8BD6F9720F42C53009B7BF1 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8BD6F9520F42C53009B7BF1 /* ProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		A878C51520F3FC8C004EEA39 /* InstagramAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A878C51920F3FC8C004EEA39 /* InstagramAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramAppUITests.m; sourceTree = "<group>"; };
 		A878C51B20F3FC8C004EEA39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8BD6F9320F42C53009B7BF1 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		A8BD6F9420F42C53009B7BF1 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		A8BD6F9520F42C53009B7BF1 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +113,9 @@
 				A878C4F520F3FC8B004EEA39 /* ViewController.h */,
 				A878C4F620F3FC8B004EEA39 /* ViewController.m */,
 				A878C4F820F3FC8C004EEA39 /* Main.storyboard */,
+				A8BD6F9320F42C53009B7BF1 /* ProfileViewController.h */,
+				A8BD6F9420F42C53009B7BF1 /* ProfileViewController.m */,
+				A8BD6F9520F42C53009B7BF1 /* ProfileViewController.xib */,
 				A878C4FE20F3FC8C004EEA39 /* Assets.xcassets */,
 				A878C50020F3FC8C004EEA39 /* LaunchScreen.storyboard */,
 				A878C50320F3FC8C004EEA39 /* Info.plist */,
@@ -243,6 +251,7 @@
 			files = (
 				A878C50220F3FC8C004EEA39 /* LaunchScreen.storyboard in Resources */,
 				A878C4FF20F3FC8C004EEA39 /* Assets.xcassets in Resources */,
+				A8BD6F9720F42C53009B7BF1 /* ProfileViewController.xib in Resources */,
 				A878C4FA20F3FC8C004EEA39 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +281,7 @@
 				A878C4F720F3FC8B004EEA39 /* ViewController.m in Sources */,
 				A878C50520F3FC8C004EEA39 /* main.m in Sources */,
 				A878C4F420F3FC8B004EEA39 /* AppDelegate.m in Sources */,
+				A8BD6F9620F42C53009B7BF1 /* ProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

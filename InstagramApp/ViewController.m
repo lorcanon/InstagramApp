@@ -17,8 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    [_webview setDelegate:self];
      NSLog(@"viewDidLoad 01");
+    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=code"]];
+    [_webview loadRequest:request];
 }
 
 
@@ -26,6 +28,25 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    NSLog(@"Loading URL :%@", request.URL.absoluteString);
+    if (navigationType ==UIWebViewNavigationTypeFormSubmitted) {
+        NSLog(@"Form submitted");
+    }
+    return YES;
+}
+- (void) webViewDidStartLoad:(UIWebView *)webView
+ {
+     NSLog(@"webViewDidStartLoad 01");
+ }
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    NSLog(@"webViewDidFinishLoad 01");
+}
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    NSLog(@"didFailLoadWithError : %@", [error debugDescription]);
+}
 @end
+

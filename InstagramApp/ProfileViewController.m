@@ -22,7 +22,7 @@
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     NSString *postLength = [NSString stringWithFormat:@"%d",[postData length]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setURL:[NSURL URLWithString:@"http://www.abcde.com/xyz/login.aspx"]];
+    [request setURL:[NSURL URLWithString:@"https://www.abcde.com/xyz/login.aspx"]];
     [request setHTTPMethod:@"POST"];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
@@ -42,7 +42,7 @@
 // This method is used to receive the data which we get using post method.
 //- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData*)data
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
- _responseData = [[NSMutableData alloc] init];                                                //LON re -> _r
+ _responseData = [[NSMutableData alloc] init];
 }
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
     [_responseData appendData:data];
@@ -60,11 +60,7 @@
                         [_responseData mutableBytes] length:[_responseData length] encoding:NSUTF8StringEncoding];
     NSLog(@"%@", theXML);
 }
-// This method receives the error report in case of connection is not made to server.
-//- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 
-// This method is used to process the data after connection has made successfully.
-//- (void)connectionDidFinishLoading:(NSURLConnection *)connection
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

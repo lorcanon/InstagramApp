@@ -42,7 +42,7 @@
 // This method is used to receive the data which we get using post method.
 //- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData*)data
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
- _responseData = [[NSMutableData alloc] init];                                                //LON re -> _re
+ _responseData = [[NSMutableData alloc] init];                                                //LON re -> _r
 }
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
     [_responseData appendData:data];

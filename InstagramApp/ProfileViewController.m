@@ -63,9 +63,23 @@
     
     // NSLog(@"DONE. Received Bytes: %d", [responseData length]);
     
-    NSString *theXML = [[NSString alloc] initWithBytes:
+    NSString *result = [[NSString alloc] initWithBytes:
                         [_responseData mutableBytes] length:[_responseData length] encoding:NSUTF8StringEncoding];
-    NSLog(@"%@", theXML);
+    NSLog(@"%@", result);
+    NSMutableArray *JSONResult = [NSJSONSerialization JSONObjectWithData:_responseData options:NSJSONReadingMutableContainers error:nil];
+    NSMutableArray *profile = [JSONResult valueForKey:@"data"];
+    NSString *fullName = [profile valueForKey:@"full_name"];
+    NSLog(@"full name %@", fullName);
+    /*for (NSMutableDictionary *dict in JSONResult) {
+        NSString *string = dict[@"array"];
+        if (string) {
+            NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
+            dict[@"array"] = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        } else {
+            NSLog(@"Error in JSON response");
+        }
+    } */
+    
 }
 
 

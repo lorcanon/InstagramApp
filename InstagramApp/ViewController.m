@@ -26,7 +26,7 @@
     //https://api.instagram.com/v1/users/self/?access_token=
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://api.instagram.com/v1/users/self/?access_token=8145354658.5159e3c.f7f887f770354e2f995af7e49464d55b"]];
 
-    [_webview loadRequest:request];
+ //   [_webview loadRequest:request];
 }
 
 

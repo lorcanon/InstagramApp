@@ -9,7 +9,6 @@
 #import "Profile.h"
 
 @implementation Profile
-
 -(void) populateFromJSON: (NSMutableArray *)JSONResult
 {
     NSMutableArray *profile = [JSONResult valueForKey:@"data"];
@@ -34,6 +33,5 @@
     NSMutableArray *meta = [JSONResult valueForKey:@"meta"];
     _metaCode = [meta valueForKey:@"code"];
 }
-
 
 @end

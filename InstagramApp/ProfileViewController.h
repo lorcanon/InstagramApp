@@ -12,6 +12,12 @@
 {
     NSMutableData *_responseData;
 }
+
+
+@property BOOL awaitingProfile;
+@property BOOL awaitingPosts;
+
 @property (weak, nonatomic) IBOutlet UIImageView *profilePic;
+-(BOOL) requestDataWithStringUrl: (NSString *) stringUrl;
 
 @end

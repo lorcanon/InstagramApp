@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ViewController.h"
 
 @interface Profile : NSObject
-
 
 @property (weak, nonatomic) NSString *id;
 @property (weak, nonatomic) NSString *username;
@@ -22,6 +22,7 @@
 @property (weak, nonatomic) NSString *countsFollows;
 @property (weak, nonatomic) NSString *countsFollowedBy;
 @property (weak, nonatomic) NSString *metaCode;
+
 -(void) populateFromJSON: (NSMutableArray *)JSONResult;
 
 @end

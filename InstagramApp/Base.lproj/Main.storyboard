@@ -58,7 +58,7 @@
                                 <rect key="frame" x="16" y="20" width="343" height="627"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gNa-2N-cFn">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="gNa-2N-cFn">
                                         <rect key="frame" x="125" y="24" width="92" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -192,10 +192,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="uXG-mx-Xpp"/>
                     </view>
+                    <connections>
+                        <outlet property="profilePic" destination="gNa-2N-cFn" id="cej-b8-38j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0B-US-275" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="336.80000000000001" y="-163.26836581709148"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="profilePic" width="16" height="16"/>
+    </resources>
 </document>

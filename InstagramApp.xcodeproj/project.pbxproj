@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A81B4E9420FCCE0B002D1DBC /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = A81B4E9320FCCE0A002D1DBC /* Profile.m */; };
+		A81B4E9520FCCE0C002D1DBC /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = A81B4E9320FCCE0A002D1DBC /* Profile.m */; };
+		A81B4E9620FCCE0C002D1DBC /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = A81B4E9320FCCE0A002D1DBC /* Profile.m */; };
+		A81B4E9920FD5394002D1DBC /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = A81B4E9820FD5394002D1DBC /* Post.m */; };
+		A81B4E9A20FD5394002D1DBC /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = A81B4E9820FD5394002D1DBC /* Post.m */; };
+		A81B4E9B20FD5394002D1DBC /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = A81B4E9820FD5394002D1DBC /* Post.m */; };
 		A878C4F420F3FC8B004EEA39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A878C4F320F3FC8B004EEA39 /* AppDelegate.m */; };
 		A878C4F720F3FC8B004EEA39 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A878C4F620F3FC8B004EEA39 /* ViewController.m */; };
 		A878C4FA20F3FC8C004EEA39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A878C4F820F3FC8C004EEA39 /* Main.storyboard */; };
@@ -38,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A81B4E9220FCCE09002D1DBC /* Profile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
+		A81B4E9320FCCE0A002D1DBC /* Profile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
+		A81B4E9720FD5393002D1DBC /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		A81B4E9820FD5394002D1DBC /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		A878C4EF20F3FC8B004EEA39 /* InstagramApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A878C4F220F3FC8B004EEA39 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A878C4F320F3FC8B004EEA39 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -88,6 +98,8 @@
 		A878C4E620F3FC89004EEA39 = {
 			isa = PBXGroup;
 			children = (
+				A81B4E9220FCCE09002D1DBC /* Profile.h */,
+				A81B4E9320FCCE0A002D1DBC /* Profile.m */,
 				A878C4F120F3FC8B004EEA39 /* InstagramApp */,
 				A878C50D20F3FC8C004EEA39 /* InstagramAppTests */,
 				A878C51820F3FC8C004EEA39 /* InstagramAppUITests */,
@@ -115,6 +127,8 @@
 				A878C4F820F3FC8C004EEA39 /* Main.storyboard */,
 				A8BD6F9320F42C53009B7BF1 /* ProfileViewController.h */,
 				A8BD6F9420F42C53009B7BF1 /* ProfileViewController.m */,
+				A81B4E9720FD5393002D1DBC /* Post.h */,
+				A81B4E9820FD5394002D1DBC /* Post.m */,
 				A8BD6F9520F42C53009B7BF1 /* ProfileViewController.xib */,
 				A878C4FE20F3FC8C004EEA39 /* Assets.xcassets */,
 				A878C50020F3FC8C004EEA39 /* LaunchScreen.storyboard */,
@@ -280,8 +294,10 @@
 				A878C4FD20F3FC8C004EEA39 /* InstagramApp.xcdatamodeld in Sources */,
 				A878C4F720F3FC8B004EEA39 /* ViewController.m in Sources */,
 				A878C50520F3FC8C004EEA39 /* main.m in Sources */,
+				A81B4E9420FCCE0B002D1DBC /* Profile.m in Sources */,
 				A878C4F420F3FC8B004EEA39 /* AppDelegate.m in Sources */,
 				A8BD6F9620F42C53009B7BF1 /* ProfileViewController.m in Sources */,
+				A81B4E9920FD5394002D1DBC /* Post.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +306,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A878C50F20F3FC8C004EEA39 /* InstagramAppTests.m in Sources */,
+				A81B4E9A20FD5394002D1DBC /* Post.m in Sources */,
+				A81B4E9520FCCE0C002D1DBC /* Profile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +316,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A878C51A20F3FC8C004EEA39 /* InstagramAppUITests.m in Sources */,
+				A81B4E9B20FD5394002D1DBC /* Post.m in Sources */,
+				A81B4E9620FCCE0C002D1DBC /* Profile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

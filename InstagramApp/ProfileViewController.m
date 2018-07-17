@@ -7,13 +7,15 @@
 //
 
 #import "ProfileViewController.h"
+#import "Profile.h"
+#import "Post.h"
 
 @interface ProfileViewController () 
+//@property (weak, nonatomic) IBOutlet UIImageView *profilePic;
 
 @end
 
 @implementation ProfileViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -33,7 +35,7 @@
  
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setURL:[NSURL URLWithString:@"https://api.instagram.com/v1/users/self/?access_token=8145354658.5159e3c.f7f887f770354e2f995af7e49464d55b"]];
+    [request setURL:[NSURL URLWithString:@"https://api.instagram.com/v1/users/self/media/recent/?access_token=8145354658.5159e3c.f7f887f770354e2f995af7e49464d55b"]];
     [request setHTTPMethod:@"GET"];
     NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
 
@@ -67,9 +69,28 @@
                         [_responseData mutableBytes] length:[_responseData length] encoding:NSUTF8StringEncoding];
     NSLog(@"%@", result);
     NSMutableArray *JSONResult = [NSJSONSerialization JSONObjectWithData:_responseData options:NSJSONReadingMutableContainers error:nil];
-    NSMutableArray *profile = [JSONResult valueForKey:@"data"];
-    NSString *fullName = [profile valueForKey:@"full_name"];
-    NSLog(@"full name %@", fullName);
+    NSMutableArray *postArray = [JSONResult valueForKey:@"data"];
+    NSLog(@"number of posts %d ", postArray.count);
+    NSMutableArray<Post *> *posts =[[NSMutableArray alloc] init];
+    
+    for (int i = 0; i<postArray.count; i++) {
+        Post *posta =  [[Post alloc] init];
+        [posta populateFromJSON: [postArray objectAtIndex:i]];
+        [posts addObject:posta];
+    }
+    NSData *imageData  = [NSData dataWithContentsOfURL:[NSURL URLWithString: posts[0].imageUrl]];
+    [_profilePic setImage:[UIImage imageWithData:imageData]];
+
+    
+    
+    
+    /*
+    Profile *profile =  [[Profile alloc] init];
+    [profile populateFromJSON: JSONResult];
+    NSLog(@"full name from object%@ ", profile.fullName);
+    NSMutableArray *profileTest = [JSONResult valueForKey:@"data"];
+    NSString *fullName = [profileTest valueForKey:@"full_name"];
+    NSLog(@"full name %@ ", fullName);  */
     /*for (NSMutableDictionary *dict in JSONResult) {
         NSString *string = dict[@"array"];
         if (string) {

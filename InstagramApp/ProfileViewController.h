@@ -12,5 +12,6 @@
 {
     NSMutableData *_responseData;
 }
+@property (weak, nonatomic) IBOutlet UIImageView *profilePic;
 
 @end

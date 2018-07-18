@@ -17,14 +17,17 @@
 @implementation ProfileViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    if(!_awaitingProfile)
-    {
+    NSLog(@"\n\nPVC viewDidLoad 01\n\n");
+    _awaitingProfile = NO;
+    _awaitingPosts = NO;
+//    if(!_awaitingProfile)
+ //   {
         if([self requestDataWithStringUrl: @"https://api.instagram.com/v1/users/self/?access_token=8145354658.5159e3c.f7f887f770354e2f995af7e49464d55b"])
         {
             NSLog(@"\n\nsent Profile request\n\n");
             _awaitingProfile = YES;
         }
-    }
+ //   }
 
 }
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{

@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ProfileViewController.h"
 
 @interface ViewController : UIViewController<UIWebViewDelegate>{
     
     
 }
 @property (weak, nonatomic) IBOutlet UIWebView *webview;
-
+@property BOOL persistentDataValid;
 @end
 

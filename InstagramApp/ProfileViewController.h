@@ -16,8 +16,10 @@
 
 @property BOOL awaitingProfile;
 @property BOOL awaitingPosts;
-
+@property (weak, nonatomic) NSString *accessToken;
+@property BOOL accessTokenIsValid;
 @property (weak, nonatomic) IBOutlet UIImageView *profilePic;
+
 -(BOOL) requestDataWithStringUrl: (NSString *) stringUrl;
 
 @end

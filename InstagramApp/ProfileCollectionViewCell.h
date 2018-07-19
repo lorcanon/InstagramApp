@@ -11,5 +11,7 @@
 
 @interface ProfileCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *profilePic;
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *followedBy;
 
 @end

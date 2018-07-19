@@ -31,15 +31,7 @@
             _persistentDataValid = YES;
             _accessTokenIsValid = YES;
             NSLog(@"\n\nPersistent data valid\n\n");
-    //        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-     //       UIStoryboard *storyboard = self.storyboard;
-
-      //      ProfileViewController * profileViewController = [storyboard instantiateViewControllerWithIdentifier:@"profile"];
- //           profileViewController.accessToken = accessToken;
- //           profileViewController.accessTokenIsValid = YES;
-     //       [self presentViewController:profileViewController animated:YES completion:nil];
-     //   [self performSegueWithIdentifier:@"vcToPvc" sender:self];
-    }
+     }
     else
     {
     

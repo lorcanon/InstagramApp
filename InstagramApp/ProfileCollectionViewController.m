@@ -29,8 +29,10 @@ static NSString * const reuseIdentifier = @"Cell";
     
     _awaitingProfile = NO;
     _awaitingPosts = NO;
-
-    if([self requestDataWithStringUrl: @"https://api.instagram.com/v1/users/self/?access_token=8145354658.5159e3c.f7f887f770354e2f995af7e49464d55b"])
+    _accessToken = [[NSUserDefaults standardUserDefaults] valueForKey:@"access_token"];
+    NSString *endpoint = [@"https://api.instagram.com/v1/users/self/?access_token=" stringByAppendingString:_accessToken];
+    if([self requestDataWithStringUrl: endpoint])
+    //if([self requestDataWithStringUrl: @"https://api.instagram.com/v1/users/self/?access_token=8145354658.5159e3c.f7f887f770354e2f995af7e49464d55b"])
     {
         NSLog(@"\n\nsent Profile request\n\n");
         _awaitingProfile = YES;

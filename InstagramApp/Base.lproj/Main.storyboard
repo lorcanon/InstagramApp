@@ -63,6 +63,14 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7S-Cc-6zD">
+                                            <rect key="frame" x="208" y="249" width="88" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Back"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="dsJ-g9-U9X"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </view>
                                 <color key="backgroundColor" red="1" green="0.24903154866719068" blue="0.56464883202092642" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

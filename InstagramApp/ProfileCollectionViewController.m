@@ -122,15 +122,19 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    NSLog(@"\n\n\n\nsegue\n\n\n\n");
+    //corrupt checksum to force login (doesn't work)
+   // NSNumber *chkNsnumber = [NSNumber numberWithInteger:0];
+    //[[NSUserDefaults standardUserDefaults] setValue:chkNsnumber forKey:@"a_t_checksum"];
 }
-*/
+
 #pragma mark <UICollectionViewDelegateFlowLayout>
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath

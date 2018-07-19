@@ -97,7 +97,7 @@ static NSString * const reuseIdentifier = @"Cell";
         [[NSUserDefaults standardUserDefaults] setValue:posts[1].imageUrl forKey:@"picture02"];
         [[NSUserDefaults standardUserDefaults] setValue:posts[1].fullName forKey:@"full_name02"];
         [[NSUserDefaults standardUserDefaults] setValue:posts[1].captionText forKey:@"caption02"];
-
+        [self.collectionView reloadData];
     //    NSData *imageData  = [NSData dataWithContentsOfURL:[NSURL URLWithString: posts[0].imageUrl]];
     //    [_profilePic setImage:[UIImage imageWithData:imageData]];
         _awaitingPosts = NO;

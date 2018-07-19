@@ -31,6 +31,8 @@
             _persistentDataValid = YES;
             _accessTokenIsValid = YES;
             NSLog(@"\n\nPersistent data valid\n\n");
+            self.getDataButton.hidden = NO;
+
      }
     else
     {
@@ -70,7 +72,7 @@
         }
         NSNumber *chkNsnumber = [NSNumber numberWithInteger:checkSum];
          [[NSUserDefaults standardUserDefaults] setValue:chkNsnumber forKey:@"a_t_checksum"];
-        
+        self.getDataButton.hidden = NO;
     } else {
         NSLog(@"\n\naccess_token not found\n\n");
     }

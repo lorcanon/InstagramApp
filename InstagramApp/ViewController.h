@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ProfileViewController.h"
 
 @interface ViewController : UIViewController<UIWebViewDelegate>{
     
@@ -17,6 +16,7 @@
 @property BOOL persistentDataValid;
 @property BOOL accessTokenIsValid;
 @property (weak, nonatomic) NSString *accessToken;
+@property (weak, nonatomic) IBOutlet UIButton *getDataButton;
 
 
 @end

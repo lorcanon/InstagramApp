@@ -25,7 +25,6 @@
 		A881B30A20FFB12A00A82E04 /* ProfileCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A881B30920FFB12900A82E04 /* ProfileCollectionViewCell.m */; };
 		A881B30D20FFB15400A82E04 /* PostCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A881B30C20FFB15400A82E04 /* PostCollectionViewCell.m */; };
 		A881B3102100078200A82E04 /* ProfileCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A881B30F2100078200A82E04 /* ProfileCollectionViewController.m */; };
-		A8BD6F9620F42C53009B7BF1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8BD6F9420F42C53009B7BF1 /* ProfileViewController.m */; };
 		A8BD6F9720F42C53009B7BF1 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8BD6F9520F42C53009B7BF1 /* ProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -74,8 +73,6 @@
 		A881B30C20FFB15400A82E04 /* PostCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PostCollectionViewCell.m; path = InstagramApp/PostCollectionViewCell.m; sourceTree = "<group>"; };
 		A881B30E2100078200A82E04 /* ProfileCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileCollectionViewController.h; sourceTree = "<group>"; };
 		A881B30F2100078200A82E04 /* ProfileCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileCollectionViewController.m; sourceTree = "<group>"; };
-		A8BD6F9320F42C53009B7BF1 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
-		A8BD6F9420F42C53009B7BF1 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		A8BD6F9520F42C53009B7BF1 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,8 +137,6 @@
 				A878C4F820F3FC8C004EEA39 /* Main.storyboard */,
 				A881B30E2100078200A82E04 /* ProfileCollectionViewController.h */,
 				A881B30F2100078200A82E04 /* ProfileCollectionViewController.m */,
-				A8BD6F9320F42C53009B7BF1 /* ProfileViewController.h */,
-				A8BD6F9420F42C53009B7BF1 /* ProfileViewController.m */,
 				A81B4E9720FD5393002D1DBC /* Post.h */,
 				A81B4E9820FD5394002D1DBC /* Post.m */,
 				A8BD6F9520F42C53009B7BF1 /* ProfileViewController.xib */,
@@ -313,7 +308,6 @@
 				A881B3102100078200A82E04 /* ProfileCollectionViewController.m in Sources */,
 				A878C4F420F3FC8B004EEA39 /* AppDelegate.m in Sources */,
 				A881B30D20FFB15400A82E04 /* PostCollectionViewCell.m in Sources */,
-				A8BD6F9620F42C53009B7BF1 /* ProfileViewController.m in Sources */,
 				A881B30A20FFB12A00A82E04 /* ProfileCollectionViewCell.m in Sources */,
 				A81B4E9920FD5394002D1DBC /* Post.m in Sources */,
 			);

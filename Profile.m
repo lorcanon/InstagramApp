@@ -18,10 +18,8 @@
     _fullName = [profile valueForKey:@"full_name"];
     _bio = [profile valueForKey:@"bio"];
     _website = [profile valueForKey:@"website"];
-   // _isBusiness = [profile valueForKey:@"is_business"];
     NSNumber *yesNo = (NSNumber *)[profile valueForKey: @"is_business"];
     if([yesNo boolValue] == NO){
-   // if ([[profile valueForKey:@"is_business"] boolValue] == false) {
         _isBusiness = NO;
     } else {
         _isBusiness = YES;

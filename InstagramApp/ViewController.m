@@ -17,7 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    ///////////////////////////////////////////////////////////////////////////
+    
+    //check if we have a token and it's not corrupt
     NSString *accessToken = [[NSUserDefaults standardUserDefaults] valueForKey:@"access_token"];
     int checkSumSaved = [[[NSUserDefaults standardUserDefaults] valueForKey:@"a_t_checksum"] intValue] ;
     int acsTokenLength = [accessToken length];
@@ -36,13 +37,10 @@
      }
     else
     {
-    
-///////////////////////////////////////////////////////////////////////////
+    //no valid token, get one
+
         [_webview setDelegate:self];
-         NSLog(@"vc viewDidLoad 01");
-      //  NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://www.instagram.com"]];
-     //   NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=code"]];
-        NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://api.instagram.com/oauth/authorize/?client_id=5159e3cc93574d1fa7d9fbba32158a35&redirect_uri=https://www.lorcanoneill.ie&response_type=token"]];
+         NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://api.instagram.com/oauth/authorize/?client_id=5159e3cc93574d1fa7d9fbba32158a35&redirect_uri=https://www.lorcanoneill.ie&response_type=token"]];
 
         [_webview loadRequest:request];
     }
@@ -54,7 +52,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
-{
+{   //token will appear in a uri so watch for it and extract it
     NSString *urlWithToken = request.URL.absoluteString;
     if ([urlWithToken containsString:@"access_token"]) {
          NSRange range = [urlWithToken rangeOfString:@"access_token="];
@@ -96,18 +94,8 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"\n\nPVC prepareForSegue:  \n\n");
- //   ProfileViewController *profileViewController = [segue destinationViewController];
- //   profileViewController.accessTokenIsValid = _accessTokenIsValid;
-  //  profileViewController.accessToken = _accessToken;
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
 }
-/*
-- (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender
-{
-    NSLog(@"\n\nPVC performSegueWithIdentifier:  \n\n");
-    
-}*/
+
 @end
 

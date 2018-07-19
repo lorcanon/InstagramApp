@@ -5,6 +5,13 @@
 //  Created by loneill on 18/07/2018.
 //  Copyright © 2018 loneill. All rights reserved.
 //
+//This view controller uses the token to get the user profile info and then the recent posts.
+//All the received data is parsed and stored in objects.
+//This VC also handles the collection view. Two custom cells are used, one for the profile data and one for the posts.
+//Only 2 recent posts are displayed in this versionn though the collection view can easily use an array of objects to display many.
+//NSUserDefaults is used for persistent data and also sending the data to the collection view cells - not very elegant! NSNotification or a singleton would have been nicer - next time!
+
+
 
 #import "ProfileCollectionViewController.h"
 

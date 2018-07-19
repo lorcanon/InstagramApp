@@ -15,5 +15,9 @@
 }
 @property (weak, nonatomic) IBOutlet UIWebView *webview;
 @property BOOL persistentDataValid;
+@property BOOL accessTokenIsValid;
+@property (weak, nonatomic) NSString *accessToken;
+
+
 @end
 

@@ -29,16 +29,16 @@
     _persistentDataValid = NO;
     if ((checkSum!=0) && (checkSumSaved == checkSum)){
             _persistentDataValid = YES;
+            _accessTokenIsValid = YES;
             NSLog(@"\n\nPersistent data valid\n\n");
     //        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-            UIStoryboard *storyboard = self.storyboard;
+     //       UIStoryboard *storyboard = self.storyboard;
 
-   //         ProfileViewController * profileViewController = [storyboard instantiateViewControllerWithIdentifier:@"profile"];
+      //      ProfileViewController * profileViewController = [storyboard instantiateViewControllerWithIdentifier:@"profile"];
  //           profileViewController.accessToken = accessToken;
  //           profileViewController.accessTokenIsValid = YES;
-  //          [self presentViewController:profileViewController animated:YES completion:nil];
-        [super performSegueWithIdentifier:@"vcToPvc" sender:self];
-        [self performSegueWithIdentifier:@"vcToPvc" sender:self];
+     //       [self presentViewController:profileViewController animated:YES completion:nil];
+     //   [self performSegueWithIdentifier:@"vcToPvc" sender:self];
     }
     else
     {
@@ -105,11 +105,18 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"\n\nprepareForSegue:  \n\n");
+    NSLog(@"\n\nPVC prepareForSegue:  \n\n");
+ //   ProfileViewController *profileViewController = [segue destinationViewController];
+ //   profileViewController.accessTokenIsValid = _accessTokenIsValid;
+  //  profileViewController.accessToken = _accessToken;
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-
-
+/*
+- (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    NSLog(@"\n\nPVC performSegueWithIdentifier:  \n\n");
+    
+}*/
 @end
 

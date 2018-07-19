@@ -34,6 +34,25 @@
  _responseData = [[NSMutableData alloc] init];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    NSLog(@"\n\nPVC viewWillAppear\n\n");
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    NSLog(@"\n\nPVC viewDidAppear\n\n");
+}
+-(void)viewWillLayoutSubviews
+{
+    NSLog(@"\n\nPVC viewWillLayoutSubviews\n\n");
+}
+-(void)viewDidLayoutSubviews
+{
+    NSLog(@"\n\nPVC viewWillLayoutSubviews\n\n");
+}
+
+
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
     [_responseData appendData:data];
@@ -56,8 +75,12 @@
     NSLog(@"\n\n\nJason string%@\n\n\n", result);
     NSMutableArray *JSONResult = [NSJSONSerialization JSONObjectWithData:_responseData options:NSJSONReadingMutableContainers error:nil];
     if (_awaitingProfile) {
-        Profile *profile =  [[Profile alloc] init];
-        [profile populateFromJSON: JSONResult];
+        _profile =  [[Profile alloc] init];
+        [(Profile *)_profile populateFromJSON: JSONResult];
+        
+        //only one instance of profile. store a reference for easy access
+      [[NSUserDefaults standardUserDefaults] setValue:((Profile *)_profile).profile_picture forKey:@"profile"];
+        
         _awaitingProfile = NO;
         if([self requestDataWithStringUrl: @"https://api.instagram.com/v1/users/self/media/recent/?access_token=8145354658.5159e3c.f7f887f770354e2f995af7e49464d55b"])
         {
@@ -105,14 +128,33 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"\n\nscroll view cell\n\n");
+   // Profile *profile = [[NSUserDefaults standardUserDefaults] valueForKey:@"profile"];
+    ProfileCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ProfileCell" forIndexPath:indexPath];
+     NSString *profilePicUrl = [[NSUserDefaults standardUserDefaults] valueForKey:@"profile"];
+    NSData *imageData  = [NSData dataWithContentsOfURL:[NSURL URLWithString: profilePicUrl]];
+    [_profilePic setImage:[UIImage imageWithData:imageData]];
+   // _awaitingPosts = NO;
+    
+  //  [cell.profilePic setImage:[UIImage imagef]
+    return cell;
 }
-*/
+
+- (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 3;
+}
+
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

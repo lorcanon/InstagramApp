@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Profile.h"
+#import "ProfileCollectionViewCell.h"
+#import "PostCollectionViewCell.h"
 
-@interface ProfileViewController : UIViewController<NSURLConnectionDelegate>
+
+@interface ProfileViewController : UIViewController<NSURLConnectionDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
 {
     NSMutableData *_responseData;
 }
@@ -19,6 +23,8 @@
 @property (weak, nonatomic) NSString *accessToken;
 @property BOOL accessTokenIsValid;
 @property (weak, nonatomic) IBOutlet UIImageView *profilePic;
+//@property  Profile *profile;
+@property  NSObject *profile;
 
 -(BOOL) requestDataWithStringUrl: (NSString *) stringUrl;
 
